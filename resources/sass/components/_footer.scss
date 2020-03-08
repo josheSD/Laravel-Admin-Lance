@@ -1,0 +1,12 @@
+.l-footer{
+    border-top:1px solid #e7e7e7;
+    display:grid;
+    grid-template-rows:1fr;
+    grid-template-columns:1fr;
+    padding-top: 20px;
+}
+
+.l-footer span{
+    display:inline-block;
+    justify-self: end;
+}

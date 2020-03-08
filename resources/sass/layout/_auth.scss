@@ -1,0 +1,19 @@
+.main-banner{
+    width:100vw;
+    height:100vh;
+}
+
+.main-banner__hero-imagen{
+    height:100%;
+    width:100%;
+    background-size:cover;
+    object-fit:cover;
+    position: absolute;
+}
+
+.main-banner__content{
+    position:relative;
+    height:100%;
+    width:100%;
+    background-color:rgba(0,0,0,.5);
+}
