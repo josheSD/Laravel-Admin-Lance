@@ -1,7 +1,7 @@
 <div class="l-sidebar">
     <div class="sidebar__enterprise">
-        <img class="sidebar_photo" src="{{ asset('img/admin/Angular.png') }}" alt="empresa">
-        <p>Ugel Admin</p>
+        <img class="sidebar_photo" src="{{ asset('img/admin/Laravel.png') }}" alt="empresa">
+        <p>Lance Admin</p>
     </div>
     <div class="sidebar__items">
 
