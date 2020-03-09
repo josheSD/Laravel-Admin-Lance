@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/dashboard', function () {
-    return view('module.dashboard.dashboard');
+    return view('module.dashboard.dashboard',['',]);
 });
 
+Route::get('users','UserController@index')->name('user.index');
 
 Route::group(['prefix' => '/profile'],function(){
     Route::get('/',function(){
