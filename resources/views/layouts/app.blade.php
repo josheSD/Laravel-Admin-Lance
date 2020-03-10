@@ -16,10 +16,14 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/libs/font-awesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    <div id="app">
+
+    <div class="l-container" id="app">
+
+        {{--
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -70,10 +74,18 @@
                 </div>
             </div>
         </nav>
+        --}}
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+        <div class="main-banner">
+            <img class="main-banner__hero-imagen"
+                 src="{{asset('img/login/login.jpg')}}"
+                 alt="background imagen"
+            >
+            <div class="main-banner__content">
+                @yield('content')
+            </div>
+        </div>
     </div>
+
 </body>
 </html>

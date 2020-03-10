@@ -7,7 +7,7 @@
 
         <div class="sidebar__user" id="btn_usuario">
             <img class="sidebar__user-icon" src="{{ asset('img/admin/usuario.png') }}" alt="usuario">
-            <p>Usuario</p>
+            <p>{{ Auth::user()->name }}</p>
         </div>
 
         <a class="sidebar__user marcador display-none" href="{{url('/profile') }}">
@@ -20,9 +20,18 @@
             <p style="color:#fff">Configuración</p>
         </a>
 
-        <a class="sidebar__user marcador display-none" href="{{url('/login')}}">
+        <a class="sidebar__user marcador display-none" href="{{route('logout')}}"
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit()">
             <p style="color:#fff" class="sidebar__user-icon">S</p>
-            <p style="color:#fff">Salir</p>
+            <p style="color:#fff">
+                Salir
+            </p>
+            <form id="logout-form"
+                  action="{{ route('logout') }}"
+                  method="POST" style="display:none;">
+                @csrf
+            </form>
         </a>
 
         <hr class="border-bottom">

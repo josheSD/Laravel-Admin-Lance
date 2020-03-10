@@ -11055,7 +11055,7 @@ body {
 }
 
 .form__icon {
-  padding-top: 18px;
+  padding-top: 9px;
   padding-right: 10px;
   color: #495057;
 }
@@ -11125,11 +11125,15 @@ body {
   color: #0062cc;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 100%;
+}
+
 @media screen and (min-width: 992px) {
   .wrapper {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 260px 1fr;
+    grid-template-columns: 260px calc(100% - 260px);
   }
 }
 
@@ -11456,6 +11460,7 @@ body {
 .sidebar__user:nth-child(2) p:first-child,
 .sidebar__user:nth-child(3) p:first-child,
 .sidebar__user:nth-child(4) p:first-child {
+  display: inline-block;
   text-align: center;
 }
 

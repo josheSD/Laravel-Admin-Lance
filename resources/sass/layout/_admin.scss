@@ -1,8 +1,10 @@
 .wrapper{
+
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 100%;
     @include mediaquery(large){
-        display:grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: $sidebar 1fr;
+        grid-template-columns: $sidebar calc(100% - #{$sidebar});
     }
 }
 

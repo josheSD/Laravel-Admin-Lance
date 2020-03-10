@@ -17,7 +17,8 @@ Route::get('/dashboard', function () {
     return view('module.dashboard.dashboard',['',]);
 });
 
-Route::get('users','UserController@index')->name('user.index');
+Route::get('/users','UserController@dataTables')->name('user.datatables');
+Route::get('/posts','PostController@dataTables')->name('post.datatables');
 
 Route::group(['prefix' => '/profile'],function(){
     Route::get('/',function(){
@@ -27,6 +28,8 @@ Route::group(['prefix' => '/profile'],function(){
         return view('module.profile.configuration');
     });
 });
+
+
 
 
 
